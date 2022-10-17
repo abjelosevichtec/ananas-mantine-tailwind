@@ -1,0 +1,16 @@
+{
+  "categories": [
+    {
+      "title": "Fashion Outlet",
+      "children": ["Lux modni dodaci", "Lux odeća", "Lux obuća"]
+    },
+    {
+      "title": "Odeća",
+      "children": ["Žene", "Dečaci", "Muškarci", "Devojčice"]
+    },
+    {
+      "title": "Obuća",
+      "children": ["Žene", "Muškarci"]
+    }
+  ]
+}

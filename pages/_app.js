@@ -1,7 +1,24 @@
-import '../styles/globals.css'
+import "../styles/globals.css";
+import Head from "next/head";
+import { MantineProvider } from "@mantine/core";
+import theme from "../theme";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+export default function App(props) {
+  const { Component, pageProps } = props;
+
+  return (
+    <>
+      <Head>
+        <title>Page title</title>
+        <meta
+          name="viewport"
+          content="minimum-scale=1, initial-scale=1, width=device-width"
+        />
+      </Head>
+
+      <MantineProvider withGlobalStyles withNormalizeCSS theme={theme}>
+        <Component {...pageProps} />
+      </MantineProvider>
+    </>
+  );
 }
-
-export default MyApp
