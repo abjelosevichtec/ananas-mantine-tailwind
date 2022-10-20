@@ -4,17 +4,13 @@ import ALux from "components/assets/icons/ALux";
 import APlus from "components/assets/icons/APlus";
 import ArrowDown from "components/assets/icons/ArrowDown";
 import Tag from "components/assets/icons/Tag";
+import Categories from "./Categories";
 
 function BottomBar() {
   return (
     <Group position="apart">
       <Group spacing={16}>
-        <Button
-          className="shadow-btn-bottom rounded-categories bg-redOrange hover:bg-redOrange"
-          rightIcon={<ArrowDown color="white" />}
-        >
-          Sve kategorije
-        </Button>
+        <Categories />
         <Badge
           className="h-10 rounded-full text-b5 text-deepBlue bg-foggyBlue"
           variant="filled"

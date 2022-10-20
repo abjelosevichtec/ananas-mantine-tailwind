@@ -12,7 +12,7 @@ for (const [key, value] of Object.entries(colors)) {
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    "./components/!(testing)/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -45,6 +45,8 @@ module.exports = {
   plugins: [
     plugin(({ addVariant, theme, addComponents }) => {
       addVariant("is-expanded", '&[data-expanded="true"]');
+      addVariant("is-aria-expanded", '&[aria-expanded="true"]');
+      addVariant("group-aria-expanded", ":merge(.group):is-aria-expanded &");
       addVariant("is-opened", '&[data-opened="true"]');
       addComponents({
         ".text-p1": {

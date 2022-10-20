@@ -8,10 +8,12 @@ export default function Layout({ BeforeContent = null, children }) {
       navbarOffsetBreakpoint="sm"
       asideOffsetBreakpoint="sm"
       header={<Header />}
-      classNames={{ main: "pt-34 px-0 bg-ghostBlue text-white" }}
+      classNames={{
+        main: "pt-34 lg:pt-44 px-0 bg-ghostBlue",
+      }}
     >
       {BeforeContent && <BeforeContent />}
-      <div className="px-5">{children}</div>
+      {children}
     </AppShell>
   );
 }
