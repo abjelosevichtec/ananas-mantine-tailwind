@@ -1,12 +1,11 @@
 import {
   BackgroundImage,
   Badge,
-  Image,
   MediaQuery,
   Progress,
   Text,
 } from "@mantine/core";
-import { Carousel, Embla } from "@mantine/carousel";
+import { Carousel } from "@mantine/carousel";
 import { useCallback, useEffect, useState } from "react";
 import data from "./data.json";
 
@@ -25,7 +24,7 @@ function Mobile() {
       embla.on("scroll", handleScroll);
       handleScroll();
     }
-  }, [embla]);
+  }, [embla, handleScroll]);
 
   return (
     <MediaQuery largerThan="xl" styles={{ display: "none" }}>
